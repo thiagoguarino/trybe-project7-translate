@@ -147,7 +147,7 @@ dmypy.json
 .devcontainer
 
 # extras
-.trybe/
-.github/
-.vscode/
+github/
+trybe/
+vscode/
 trybe.yml
