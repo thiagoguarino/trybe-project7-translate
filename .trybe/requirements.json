@@ -1,0 +1,76 @@
+{
+  "requirements": [
+    {
+      "bonus": false,
+      "description": "1 - MODEL - Instanciando idiomas",
+      "enabled": true,
+      "identifier": "test_create_language",
+      "order": 1,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "2 - MODEL - Conversão atributo self.data para Dicionário",
+      "enabled": true,
+      "identifier": "test_create_dict_language",
+      "order": 2,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "3 - MODEL - Listagem de Idiomas como Dicionários",
+      "enabled": true,
+      "identifier": "test_create_list_languages",
+      "order": 3,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "4 - CONTROLLER & VIEW - Endpoint Tradutor, renderizando variáveis do Backend",
+      "enabled": true,
+      "identifier": "test_request_translate",
+      "order": 4,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "5 - CONTROLLER - Tradução de Texto - Post",
+      "enabled": true,
+      "identifier": "test_post_translate",
+      "order": 5,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "6 - CONTROLLER - Tradução Reversa",
+      "enabled": true,
+      "identifier": "test_post_reverse",
+      "order": 6,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "7 - TESTS - Histórico de Traduções",
+      "enabled": true,
+      "identifier": "test_assess_students_history_model_final",
+      "order": 7,
+      "skill_ids": []
+    },
+    {
+      "bonus": false,
+      "description": "8 - API GET - Endpoint de Listagem de Histórico de Traduções",
+      "enabled": true,
+      "identifier": "test_request_history",
+      "order": 8,
+      "skill_ids": []
+    },
+    {
+      "bonus": true,
+      "description": "9 - TEST - de Exclusão de Histórico de Traduções",
+      "enabled": true,
+      "identifier": "test_assess_students_user_model_final",
+      "order": 9,
+      "skill_ids": []
+    }
+  ]
+}
