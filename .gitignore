@@ -147,7 +147,12 @@ dmypy.json
 .devcontainer
 
 # extras
-github/
-trybe/
-vscode/
+.github/
+.trybe/
+.vscode/
+.editorconfig
 trybe.yml
+.cspell.json
+example.py
+.editorconfig
+thunder-tests/
