@@ -1,17 +1,7 @@
 # Boas-vindas ao repositório do Traduzo
 
-Atente-se a cada passo descrito a seguir pois eles lhe ajudarão a realizar o projeto! #vqv 🚀
 
 ![Tela](src/views/static/images/traduzo.png)
-
-A partir deste repositório você encontra os detalhes de como estruturar o desenvolvimento do seu projeto.
-
-<details>
-<summary>📃 Termos e acordos</summary>
-
-- Ao iniciar este projeto, você concorda com as diretrizes do [Código de Conduta e do Manual da Pessoa Estudante da Trybe](https://app.betrybe.com/learn/student-manual/codigo-de-conduta-da-pessoa-estudante).
-
-</details>
 
 ----
 
@@ -35,17 +25,6 @@ Neste projeto, verificamos se você é capaz de:
 - Escrever testes para APIs para garantir a implementação dos endpoints;
 - Interagir com um banco de dados não relacional MongoDB;
 - Desenvolver páginas web Server Side.
-
-</details>
-
-<details>
-<summary>🕊️ Como entregar</summary>
-
-- Crie um _Pull Request_ deste repositório para realizar a entrega do projeto.
-
-- Quando preciso, consulte:
-  - Nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/fe827a71-3222-4b4d-a66f-ed98e09961af/day/35e03d5e-6341-4a8c-84d1-b4308b2887ef/lesson/573db55d-f451-455d-bdb5-66545668f436);
-  - Nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/).
 
 </details>
 
@@ -137,7 +116,8 @@ docker compose exec -it translate sh
 
 ## Requisitos
 
-### 1 - MODEL - Instanciando idiomas
+<details>
+<summary>1 - MODEL - Instanciando idiomas</summary>
 
 - Use a classe `LanguageModel` em [language_model.py](src/models/language_model.py)
 - `LanguageModel` deve herdar a `AbstractModel` de [abstract_model.py](src/models/abstract_model.py)
@@ -166,8 +146,10 @@ python3 src/run_seeds.py
 # ou, caso esteja rodando a aplicação via docker
 docker compose exec -it translate python3 src/run_seeds.py
 ```
+</details>
 
-## 2 - MODEL - Conversão atributo self.data para Dicionário
+<details>
+<summary>2 - MODEL - Conversão atributo self.data para Dicionário</summary>
 
 O retorno padrão do MongoDB é um Objeto Serializado em Binário (formato conhecido por BSON), seu funcionamento é próximo de um dicionário, porém, precisaremos do formato de dicionário para facilitar a futura conversão para JSON.
 
@@ -181,7 +163,10 @@ O retorno padrão do MongoDB é um Objeto Serializado em Binário (formato conhe
 
 </details>
 
-## 3 - MODEL -  Listagem de Idiomas como Dicionários
+</details>
+
+<details>
+<summary>3 - MODEL -  Listagem de Idiomas como Dicionários</summary>
 
 Retornaremos todos os idiomas como uma lista iterável.
 
@@ -197,7 +182,11 @@ Retornaremos todos os idiomas como uma lista iterável.
 
 </details>
 
-## 4 - CONTROLLER & VIEW -  Endpoint Tradutor, renderizando variáveis do Back-end - GET
+</details>
+
+
+<details>
+<summary>4 - CONTROLLER & VIEW -  Endpoint Tradutor, renderizando variáveis do Back-end - GET</summary>
 
 Para renderizar variáveis em uma template, o Back-end (Controller) deve as enviar como parâmetros do método `render_template`. Os parâmetros que devem ser incluídos são:
 
@@ -233,8 +222,11 @@ Além disso, será também necessário atualizar o *template* `src/views/templat
 - As opções de idioma devem estar todas em letras maiúsculas.
 
 </details>
+</details>
 
-## 5 - CONTROLLER - Tradução de Texto - POST
+
+<details>
+<summary>5 - CONTROLLER - Tradução de Texto - POST</summary>
 
 Chegou a hora de traduzir o texto, para isso, a rota POST `/` deve receber os seguintes parâmetros no corpo da solicitação:
 
@@ -258,7 +250,10 @@ Chegou a hora de traduzir o texto, para isso, a rota POST `/` deve receber os se
 
 💡 Dica 2: Não temos histórico da API do `GoogleTranslator` parar de funcionar, mas, caso ocorra, você pode optar pela estratégia de traduzir manualmente *strings* pré definidas por você e pelo teste, para seguir normalmente com o desenvolvimento.
 
-## 6 - CONTROLLER - Tradução Reversa - POST
+</details>
+
+<details>
+<summary>6 - CONTROLLER - Tradução Reversa - POST</summary>
 
 Se você acessou a aplicação, deve ter visto no Front-end um botão para inverter a linguagem. Vamos implementar sua funcionalidade agora.
 
@@ -285,8 +280,11 @@ Não se esqueça que, sempre que renderizar novamente o template, passar os segu
 
 
 </details>
+</details>
 
-## 7 - TESTE - Histórico de Traduções
+
+<details>
+<summary> 7 - TESTE - Histórico de Traduções</summary>
 
 Em dias atuais, analisar dados pode gerar muitos aprendizados. Por hora, vamos armazenar o histórico de traduções.
 
@@ -304,8 +302,10 @@ A classe `HistoryModel`, já foi implementada pela equipe inicial, porém foi ut
 - Aqui entram os testes de seu teste, que serão executados pelo arquivo `tests/models/history/test_to_test_history_model.py`. Este arquivo **NÃO** deverá ser alterado.
 
 </details>
+</details>
 
-## 8 - Endpoint de Listagem de Histórico de Traduções - API GET
+<details>
+<summary>8 - Endpoint de Listagem de Histórico de Traduções - API GET</summary>
 
 O objetivo aqui é criar um *endpoint* que permita a listagem dos registros de histórico de traduções.
 
@@ -314,9 +314,13 @@ O objetivo aqui é criar um *endpoint* que permita a listagem dos registros de h
 - Registre a `Blueprint` da controller no `app.py`.
 - Ao receber uma requisição `GET` na rota, o *endpoint* deve retornar os registros de histórico de traduções em formato JSON.
 - O *endpoint* deve retornar uma resposta HTTP com status `200 (OK)` e o conteúdo JSON contendo os registros de histórico.
-- Garanta que ao realizar uma tradução na rota `POST` `http://localhost:8000/` (`src/controllers/translate_controller.py`), também seja criado o histórico. 
+- Garanta que ao realizar uma tradução na rota `POST` `http://localhost:8000/` (`src/controllers/translate_controller.py`), também seja criado o histórico.
 
-## 9 - TESTE - Exclusão de Histórico de Traduções - DELETE
+</details>
+</details>
+
+<details>
+<summary>9 - TESTE - Exclusão de Histórico de Traduções - DELETE</summary>
 
 Será preciso fornecer a equipe de administração do sistema a possibilidade de excluir um histórico por meio do endpoint `DELETE` na rota `/admin/history/<id>`. Esse endpoint necessita de um token que irá autorizar a requisição.
 
@@ -341,20 +345,6 @@ Veja um exemplo de como passar um header para uma requisição:
 💡 Dica: Para compreender a criação de um `user` e a geração de seu token, veja a implementação do arquivo `src/models/user_model.py`.
 
 ----
-
-<details>
-<summary>🗣 Nos dê feedbacks sobre o projeto!</summary>
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário.
-**Leva menos de 3 minutos!**
-
-[Formulário de avaliação do projeto](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH1&template=betrybe/python-0x-projeto-traduzo)
-
 </details>
-  
-<details>
-<summary>🗂 Compartilhe seu portfólio!</summary>
-
-Você sabia que o LinkedIn é a principal rede social profissional e compartilhar o seu aprendizado lá é muito importante para quem deseja construir uma carreira de sucesso? Compartilhe esse projeto no seu LinkedIn, marque o perfil da Trybe (@trybe) e mostre para a sua rede toda a sua evolução.
-
 </details>
+
