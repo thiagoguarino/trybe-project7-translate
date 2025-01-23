@@ -1,5 +1,4 @@
-# Translate Project
-
+### Trybe Project 37 - Translate
 
 ![Tela](src/views/static/images/traduzo.png)
 
