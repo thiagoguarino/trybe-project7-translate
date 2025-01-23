@@ -1,4 +1,4 @@
-# Boas-vindas ao repositório do Traduzo
+# Translate Project
 
 
 ![Tela](src/views/static/images/traduzo.png)
@@ -16,8 +16,6 @@
 
 <details>
   <summary>📝 Habilidades a serem trabalhadas </summary>
-
-Neste projeto, verificamos se você é capaz de:
 
 - Implementar uma API utilizando arquitetura em camadas MVC;
 - Utilizar o Docker para projetos Python;
