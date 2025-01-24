@@ -1,4 +1,4 @@
-### Trybe Project 37 - Translate
+## Trybe Project 37 - Translate
 
 ![Tela](src/views/static/images/traduzo.png)
 
@@ -114,7 +114,7 @@ docker compose exec -it translate sh
 ## Requisitos
 
 <details>
-<summary>1 - MODEL - Instanciando idiomas</summary>
+<summary><b>1 - MODEL - Instanciando idiomas</b></summary>
 
 - Use a classe `LanguageModel` em [language_model.py](src/models/language_model.py)
 - `LanguageModel` deve herdar a `AbstractModel` de [abstract_model.py](src/models/abstract_model.py)
@@ -146,7 +146,7 @@ docker compose exec -it translate python3 src/run_seeds.py
 </details>
 
 <details>
-<summary>2 - MODEL - Conversão atributo self.data para Dicionário</summary>
+<summary><b>2 - MODEL - Conversão atributo self.data para Dicionário</b></summary>
 
 O retorno padrão do MongoDB é um Objeto Serializado em Binário (formato conhecido por BSON), seu funcionamento é próximo de um dicionário, porém, precisaremos do formato de dicionário para facilitar a futura conversão para JSON.
 
@@ -163,7 +163,7 @@ O retorno padrão do MongoDB é um Objeto Serializado em Binário (formato conhe
 </details>
 
 <details>
-<summary>3 - MODEL -  Listagem de Idiomas como Dicionários</summary>
+<summary><b>3 - MODEL -  Listagem de Idiomas como Dicionários</b></summary>
 
 Retornaremos todos os idiomas como uma lista iterável.
 
@@ -183,7 +183,7 @@ Retornaremos todos os idiomas como uma lista iterável.
 
 
 <details>
-<summary>4 - CONTROLLER & VIEW -  Endpoint Tradutor, renderizando variáveis do Back-end - GET</summary>
+<summary><b>4 - CONTROLLER & VIEW -  Endpoint Tradutor, renderizando variáveis do Back-end - GET</b></summary>
 
 Para renderizar variáveis em uma template, o Back-end (Controller) deve as enviar como parâmetros do método `render_template`. Os parâmetros que devem ser incluídos são:
 
@@ -223,7 +223,7 @@ Além disso, será também necessário atualizar o *template* `src/views/templat
 
 
 <details>
-<summary>5 - CONTROLLER - Tradução de Texto - POST</summary>
+<summary><b>5 - CONTROLLER - Tradução de Texto - POST</b></summary>
 
 Chegou a hora de traduzir o texto, para isso, a rota POST `/` deve receber os seguintes parâmetros no corpo da solicitação:
 
@@ -250,7 +250,7 @@ Chegou a hora de traduzir o texto, para isso, a rota POST `/` deve receber os se
 </details>
 
 <details>
-<summary>6 - CONTROLLER - Tradução Reversa - POST</summary>
+<summary><b>6 - CONTROLLER - Tradução Reversa - POST</b></summary>
 
 Se você acessou a aplicação, deve ter visto no Front-end um botão para inverter a linguagem. Vamos implementar sua funcionalidade agora.
 
@@ -281,7 +281,7 @@ Não se esqueça que, sempre que renderizar novamente o template, passar os segu
 
 
 <details>
-<summary> 7 - TESTE - Histórico de Traduções</summary>
+<summary><b>7 - TESTE - Histórico de Traduções</b></summary>
 
 Em dias atuais, analisar dados pode gerar muitos aprendizados. Por hora, vamos armazenar o histórico de traduções.
 
@@ -302,7 +302,7 @@ A classe `HistoryModel`, já foi implementada pela equipe inicial, porém foi ut
 </details>
 
 <details>
-<summary>8 - Endpoint de Listagem de Histórico de Traduções - API GET</summary>
+<summary><b>8 - Endpoint de Listagem de Histórico de Traduções - API GET</b></summary>
 
 O objetivo aqui é criar um *endpoint* que permita a listagem dos registros de histórico de traduções.
 
@@ -317,7 +317,7 @@ O objetivo aqui é criar um *endpoint* que permita a listagem dos registros de h
 </details>
 
 <details>
-<summary>9 - TESTE - Exclusão de Histórico de Traduções - DELETE</summary>
+<summary><b>9 - TESTE - Exclusão de Histórico de Traduções - DELETE</b></summary>
 
 Será preciso fornecer a equipe de administração do sistema a possibilidade de excluir um histórico por meio do endpoint `DELETE` na rota `/admin/history/<id>`. Esse endpoint necessita de um token que irá autorizar a requisição.
 
