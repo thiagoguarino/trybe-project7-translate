@@ -4,8 +4,6 @@
 
 ----
 
-## Entregáveis
-
 <details>
 <summary>🧑‍💻 O que deverá ser desenvolvido</summary>
 
@@ -25,7 +23,6 @@
 
 </details>
 
-----
 
 ## Preparando Ambiente
 
@@ -71,7 +68,6 @@ python3 src/app.py
 
 </details>
 
-----
 
 ## Executando os Testes
 
@@ -109,7 +105,6 @@ docker compose exec -it translate sh
 
 </details>
 
-----
 
 ## Requisitos
 
