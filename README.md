@@ -67,7 +67,7 @@ python3 src/app.py
 
 
 <details>
-<summary><b>Executando os Testes</b></summary>
+<summary>📝 <b>Executando os Testes</b></summary>
 
 <details>
 <summary>🛠 Pytest pelo ambiente virtual (Recomendado) </summary>
