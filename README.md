@@ -199,7 +199,7 @@ Além disso, será também necessário atualizar o *template* `src/views/templat
    </select>
 ```
 
-- Você também precisa implementar a lógica no template para adicionar a flag `selected`, no idioma que equivaler ao acrônimo que o Back-end enviou.
+- Implementar a lógica no template para adicionar a flag `selected`, no idioma que equivaler ao acrônimo que o Back-end enviou.
 
 💡 Dica: `Jinja2` permite criar um `if`, de dentro da declaração de uma <option ...if...> </option>
 
@@ -276,7 +276,7 @@ Não se esqueça que, sempre que renderizar novamente o template, passar os segu
 <details>
 <summary><b>7 - TESTE - Histórico de Traduções</b></summary>
 
-Em dias atuais, analisar dados pode gerar muitos aprendizados. Por hora, vamos armazenar o histórico de traduções.
+Vamos armazenar o histórico de traduções.
 
 A classe `HistoryModel`, já foi implementada pela equipe inicial, porém foi utilizada uma classe auxiliar `BSONToJSON`, que não deixou o time tão confiante, principalmente porque foi criada sem testes. Nossa missão aqui será criar um teste para verificar se o método `list_as_json()` funciona adequadamente. Este método é responsável por retornar um JSON que contém os históricos salvos.
 
@@ -321,7 +321,6 @@ O código desta funcionalidade já foi implementado em [src/controllers/admin_co
 - O teste `test_history_delete` deve simular a exclusão de um registro específico do histórico e verificar se subtraiu um da base de dados usada.
 - Você precisará salvar no banco um objeto `UserModel` para a autenticação e objetos `HistoryModel` para testar a exclusão.
 - `app_test` é uma fixture definida no `conftest.py`. Você pode usá-la no teste, para chamar a requisição delete.
-- 
 
 Veja um exemplo de como passar um header para uma requisição:
 
