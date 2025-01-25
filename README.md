@@ -2,17 +2,16 @@
 
 ![Tela](src/views/static/images/traduzo.png)
 
-----
 
 <details>
-<summary>🧑‍💻 O que deverá ser desenvolvido</summary>
+<summary>🧑‍💻 <b>O que deverá ser desenvolvido</b></summary>
 
 - Uma ferramenta de tradução de textos entre vários idiomas, utilizando Python com o Framework Flask, para criar uma aplicação Server Side. Ou seja, o Back-end irá fornecer a camada View, para a pessoa usuária.
 
 </details>
 
 <details>
-  <summary>📝 Habilidades a serem trabalhadas </summary>
+  <summary>📝 <b>Habilidades a serem trabalhadas</b> </summary>
 
 - Implementar uma API utilizando arquitetura em camadas MVC;
 - Utilizar o Docker para projetos Python;
@@ -24,7 +23,8 @@
 </details>
 
 
-## Preparando Ambiente
+<details>
+<summary>🧑‍💻 <b>Preparando Ambiente</b></summary>
 
 <details>
 
@@ -67,9 +67,11 @@ python3 src/app.py
 **[6]** 💡Dica: Ao rodar a aplicação via docker, algumas variáveis de ambiente estão configuradas. O banco de dados populado ao rodar a aplicação localmente será diferente. Se encontrar alguma divergência, consulte o arquivo [db.py](src/database/db.py) e certifique-se de que está executando os comados no ambiente escolhido, local ou docker.
 
 </details>
+</details>
 
 
-## Executando os Testes
+<details>
+<summary><b>Executando os Testes</b></summary>
 
 <details>
 <summary>🛠 Pytest pelo ambiente virtual (Recomendado) </summary>
@@ -104,7 +106,7 @@ docker compose exec -it translate sh
 - Atente-se a realizar um novo Build, sempre que alterar a instalação do container.
 
 </details>
-
+</details>
 
 ## Requisitos
 
