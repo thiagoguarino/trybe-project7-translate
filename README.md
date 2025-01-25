@@ -26,9 +26,6 @@
 <details>
 <summary>🧑‍💻 <b>Preparando Ambiente</b></summary>
 
-<details>
-
-<summary>🐳 Subindo a aplicação</summary>
 
 **[1]** Crie o ambiente virtual para o projeto
 
@@ -66,7 +63,6 @@ python3 src/app.py
 
 **[6]** 💡Dica: Ao rodar a aplicação via docker, algumas variáveis de ambiente estão configuradas. O banco de dados populado ao rodar a aplicação localmente será diferente. Se encontrar alguma divergência, consulte o arquivo [db.py](src/database/db.py) e certifique-se de que está executando os comados no ambiente escolhido, local ou docker.
 
-</details>
 </details>
 
 
